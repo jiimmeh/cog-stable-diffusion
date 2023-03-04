@@ -11,17 +11,14 @@ from diffusers import (
     EulerDiscreteScheduler,
     EulerAncestralDiscreteScheduler,
     DPMSolverMultistepScheduler,
-    DEISMultistepScheduler,
 )
 from diffusers.pipelines.stable_diffusion.safety_checker import (
     StableDiffusionSafetyChecker,
 )
 
-
-MODEL_ID = "JimDesenio/landscapes-3"
+MODEL_ID = "Airic/unstableinkdream"
 MODEL_CACHE = "diffusers-cache"
 SAFETY_MODEL_ID = "CompVis/stable-diffusion-safety-checker"
-
 
 class Predictor(BasePredictor):
     def setup(self):
@@ -142,5 +139,4 @@ def make_scheduler(name, config):
         "K_EULER": EulerDiscreteScheduler.from_config(config),
         "K_EULER_ANCESTRAL": EulerAncestralDiscreteScheduler.from_config(config),
         "DPMSolverMultistep": DPMSolverMultistepScheduler.from_config(config),
-        'DEISMultistep': DEISMultistepScheduler.from_config(config),
     }[name]
