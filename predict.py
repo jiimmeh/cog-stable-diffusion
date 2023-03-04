@@ -204,4 +204,3 @@ def make_scheduler(name):
             subfolder="scheduler",
         ),
     }[name]
-git
