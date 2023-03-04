@@ -26,7 +26,7 @@ class Predictor(BasePredictor):
         print("Loading pipeline...")
 
         self.txt2img_pipe = StableDiffusionPipeline.from_pretrained(
-            "nitrosocke/Ghibli-Diffusion",
+            "JimDesenio/desenio-nature-landscapes",
             cache_dir=MODEL_CACHE,
             local_files_only=True,
         ).to("cuda")
