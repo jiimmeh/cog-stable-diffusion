@@ -20,7 +20,7 @@ os.makedirs(MODEL_CACHE, exist_ok=True)
 
 
 pipe = StableDiffusionPipeline.from_pretrained(
-    "JimDesenio/desenio-nature-landscapes",
+    "JimDesenio/desenio-landscapes",
     cache_dir=MODEL_CACHE,
     use_auth_token=sys.argv[1],
 )
