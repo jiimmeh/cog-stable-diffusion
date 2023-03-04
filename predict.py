@@ -16,9 +16,11 @@ from diffusers.pipelines.stable_diffusion.safety_checker import (
     StableDiffusionSafetyChecker,
 )
 
-MODEL_ID = "Airic/unstableinkdream"
+
+MODEL_ID = "JimDesenio/landscapes-3"
 MODEL_CACHE = "diffusers-cache"
 SAFETY_MODEL_ID = "CompVis/stable-diffusion-safety-checker"
+
 
 class Predictor(BasePredictor):
     def setup(self):
